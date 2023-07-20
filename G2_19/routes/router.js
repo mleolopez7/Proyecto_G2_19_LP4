@@ -20,7 +20,7 @@ router
   //**** ENTIDADPASAJEROS *****/
   .get("/pasajeros/getall", PasajerosController.getAll)
   .get("/pasajeros/getone/:codigo_pasajero", PasajerosController.getOne)
-  .post("/pasajeros//insert/:codigo_pasajero", PasajerosController.post)
+  .post("/pasajeros/insert/:codigo_pasajero", PasajerosController.post)
   .put("/pasajero/update/:codigo_pasajero", PasajerosController.put)
   .delete("/pasajero/delete/:codigo_pasajero", PasajerosController.delete)
   .use(PasajerosController.error404)
