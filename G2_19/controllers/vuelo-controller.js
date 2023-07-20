@@ -82,7 +82,7 @@ VueloController.post = (req, res, next) => {
 
 //CONTROL UPDATE
 VueloController.put = (req, res, next) => {
-    let paciente = {
+    let vuelo = {
         codigo_vuelo : req.body.codigo_vuelo,
         ciudad_origen : req.body.ciudad_origen,
         ciudad_destino : req.body.ciudad_destino,
