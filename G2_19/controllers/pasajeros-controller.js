@@ -84,7 +84,7 @@ PasajerosController.post = (req, res, next) => {
 }
 
 //CONTROL UPDATE
-PasajeroController.put = (req, res, next) => {
+PasajerosController.put = (req, res, next) => {
     let pasajeros = {
         codigo_pasajero: req.body.codigo_pasajero,
         nombres: req.body.nombres,
