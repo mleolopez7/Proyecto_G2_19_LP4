@@ -1,13 +1,13 @@
 'use strict'
 
 var conn = require("../config/db-connection"),
-    PasajerosModel = () => {};
+  PasajerosModel = () => {};
 
 PasajerosModel.getAll = (cb) => conn.query("SELECT * FROM pasajeros", cb);
 
 PasajerosModel.getOne = (codigo_pasajero ,cb) => 
-    conn.query(
-        "Select * From pasajeros where codigo_pasajero = $1", [codigo_pasajero], cb);
+  conn.query(
+      "Select * From pasajeros where codigo_pasajero = $1", [codigo_pasajero], cb);
 
 PasajerosModel.post = (data, cb) =>
   conn.query(
