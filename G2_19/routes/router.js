@@ -4,9 +4,7 @@
 //ESTO ES UN EJEMPLO DE LAS RUTAS
 var VueloController = require("../controllers/vuelo-controller"),
   PasajerosController = require("../controllers/pasajeros-controller"),
-  //HospitalController = require("../controllers/Hospital-controller"),
-  //ConsultaController = require("../controllers/consulta-controller"),
-  //MedicoController = require("../controllers/medico-controller"),
+  AvionController = require("../controllers/avion-controller"),
   express = require("express"),
   router = express.Router();
 
@@ -27,5 +25,12 @@ router
   .delete("/pasajero/delete/:codigo_pasajero", PasajerosController.delete)
   .use(PasajerosController.error404)
   
+  //****AVION****
+  .get("/avion/getall", AvionController.getAll)
+  .post("/avion/getone/:numero_avion", AvionController.getOne)
+  .post("/avion/insertar/:numero_avion", AvionController.post)
+  .put("/avion/actualizar/:numero_avion", AvionController.put)
+  .delete("/avion/eliminar/:numero_avion", AvionController.delete)
+  .use(AvionController.error404)
 
 module.exports = router;
