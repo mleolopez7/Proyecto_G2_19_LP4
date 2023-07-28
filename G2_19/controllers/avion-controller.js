@@ -56,7 +56,7 @@ AvionController.getOne = (req, res, next) => {
 AvionController.post = (req, res, next) => {
     let avion = {
         numero_avion : req.body.numero_avion,
-        tipo_avion_ : req.body.tipo_avion,
+        tipo_avion : req.body.tipo_avion,
         horas_vuelo : req.body.horas_vuelo,
         capacidad_pasajeros : req.body.capacidad_pasajeros,
         fecha_primer_vuelo : req.body.fecha_primer_vuelo,
